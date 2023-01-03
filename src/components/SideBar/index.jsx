@@ -12,7 +12,7 @@ const SideBar = () => {
                 <BiHome />
                 <span>Home</span>
             </NavLink>
-            <NavLink to='/fatura' className={({ isActive }) => isActive ? activeLink : null}>
+            <NavLink to='/ticket' className={({ isActive }) => isActive ? activeLink : null}>
                 <GrAddCircle />
                 <span>Tela 2</span>
             </NavLink>

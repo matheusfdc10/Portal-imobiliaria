@@ -8,7 +8,7 @@ import {
 import MainPage from ".";
 import { AuthContext, AuthProvider } from "../contexts/auth";
 import HomePage from "../pages/HomePage";
-import Tela2Page from "../pages/Tela2Page";
+import TicketPage from "../pages/TicketPage";
 
 export default function AppRoutes() {
 
@@ -34,7 +34,7 @@ export default function AppRoutes() {
                     </Private>}
                 >
                 <Route path="/home" element={<HomePage />} />
-                <Route path="/fatura" element={<Tela2Page />} />
+                <Route path="/ticket" element={<TicketPage />} />
             </Route>
             </Routes>
         </AuthProvider>

@@ -8,7 +8,7 @@ const HomePage = () => {
     return(
         <StyledHomePage>
             <h1 className="name">Olá, Matheus</h1>
-            <span>Fique por dentro da sua locação</span>
+            <span>Bem vindo ao poral do locatário</span>
 
             <Container title={'Imobiliária Matheus'}>
                 <div className="contacCompany">
@@ -30,10 +30,10 @@ const HomePage = () => {
                         <span>Fatura paga</span>
                     </div>
                     <div className="dueDate">
-                        <span>vencimento</span>
+                        <span>vencimento:</span>
                         <span>01/02/2023</span>
                     </div>
-                    <Link to='/fatura'>{'Visualizar Fatura >'}</Link>
+                    <Link to='/ticket'>{'Visualizar Fatura >'}</Link>
                 </div>
             </Container>
 

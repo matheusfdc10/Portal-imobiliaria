@@ -18,7 +18,7 @@ const NavBar = () => {
                     <BiHome />
                     <span>Início</span>
                 </NavLink>
-                <NavLink to='/fatura' className={({ isActive }) => isActive ? activeLink : null}>
+                <NavLink to='/ticket' className={({ isActive }) => isActive ? activeLink : null}>
                     <MdAttachMoney />
                     <span>Fatura</span>
                 </NavLink>

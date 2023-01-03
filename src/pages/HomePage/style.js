@@ -25,7 +25,7 @@ export const StyledHomePage = Styled.div`
         > .dueDate {
             display: flex;
             flex-direction: column;
-            margin: 12px 0;
+            margin: 20px 0;
         }
 
         > a {
