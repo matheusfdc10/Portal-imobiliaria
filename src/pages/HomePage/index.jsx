@@ -26,12 +26,12 @@ const HomePage = () => {
             <Container title={'Última fatura'}>
                 <div className="lastTicket">
                     <div className="value">
-                        <h3>R$ 100,00</h3>
-                        <span>Fatura paga</span>
+                        <h3>R$ 99,99</h3>
+                        <span>Aguardando pagamento</span>
                     </div>
                     <div className="dueDate">
                         <span>vencimento:</span>
-                        <span>01/02/2023</span>
+                        <span>10/01/2023</span>
                     </div>
                     <Link to='/ticket'>{'Visualizar Fatura >'}</Link>
                 </div>

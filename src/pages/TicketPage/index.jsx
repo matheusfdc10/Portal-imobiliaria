@@ -4,7 +4,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Link } from "react-router-dom";
  
 const TicketPage = () => {
-    const barCode = '76324783652478324782364328gfdgdfgdfgfdgdfgdfgdf746234879'
+    const barCode = '001 9 337370000000100 05009 401448 16060680935031'
 
     return(
         <StyledTicketPage>

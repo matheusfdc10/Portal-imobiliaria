@@ -15,10 +15,17 @@ export const StyledHomePage = Styled.div`
             display: flex;
             align-items: center;
             justify-content: space-between;
-            
+            gap: 40px;
+
+            > h3 {
+                flex-shrink: 0;
+            }
+    
             > span {
                 color: green;
                 font-weight: bold;
+                text-align: end;
+                word-break: break-word;
             }
         }
 

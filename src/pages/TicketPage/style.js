@@ -11,11 +11,11 @@ export const StyledTicketPage = Styled.div`
     .status {
         color: #6a6a6a;
         font-weight: bold;
-        margin: 5px 0;
+        margin: 8px 0;
     }
 
     .dueDate {
-        margin-bottom: 32px;
+        margin-bottom: 36px;
     }
     
     .textBarcode {
