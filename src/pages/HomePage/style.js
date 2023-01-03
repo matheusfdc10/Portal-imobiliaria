@@ -22,10 +22,14 @@ export const StyledHomePage = Styled.div`
             }
     
             > span {
-                color: green;
                 font-weight: bold;
                 text-align: end;
                 word-break: break-word;
+                color: #6a6a6a;
+            }
+
+            > .paid {
+                color: green;
             }
         }
 

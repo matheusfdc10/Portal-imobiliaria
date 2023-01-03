@@ -4,11 +4,14 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Container from "../../components/Container";
 import { AuthContext } from "../../contexts/auth";
+import { formatCurrency } from "../../utils/formatCurrency";
+import { formatDateNumber } from "../../utils/formatDate";
 import { StyledHomePage } from "./style"
 
 const HomePage = () => {
     const { user } = useContext(AuthContext);
-
+    const { lastTicket } = useContext(AuthContext);
+    
     return(
         <StyledHomePage>
             <h1 className="name">Olá, {user.nome.split(' ')[0]}</h1>
@@ -30,12 +33,14 @@ const HomePage = () => {
             <Container title={'Último boleto'}>
                 <div className="lastTicket">
                     <div className="value">
-                        <h3>R$ 1298,75</h3>
-                        <span>Aguardando pagamento</span>
+                        <h3>{lastTicket.valor_pago? formatCurrency(lastTicket.valor_pago) : formatCurrency(lastTicket.valor_boleto)}</h3>
+                        <span className={lastTicket.valor_pago? 'paid' : null}>
+                            {lastTicket.valor_pago? 'Boleto pago' : 'Aguardando pagamento'}
+                        </span>
                     </div>
                     <div className="dueDate">
                         <span>vencimento:</span>
-                        <span>10/01/2023</span>
+                        <span>{formatDateNumber(lastTicket.data_vencimento)}</span>
                     </div>
                     <Link to='/billet'>{'Visualizar Boleto >'}</Link>
                 </div>

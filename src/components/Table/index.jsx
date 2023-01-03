@@ -1,17 +1,14 @@
+import { formatCurrency } from "../../utils/formatCurrency";
 import { StyledTable } from "./style";
 
 const Table = ({ data }) => {
 
-    const cashFormt = (number) => {
-        return Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(number)
-    }
-
     const soma = () => {
         var total = null
         data.map((item => {
-            total += item.value
+            total += item.valor_taxa
         }))
-        return cashFormt(total)
+        return formatCurrency(total)
     }
 
     return(
@@ -27,10 +24,10 @@ const Table = ({ data }) => {
                 {
                     data.map((item) => {
                         return (
-                            <tr key={item.name}>
-                                <td>{item.name}</td>
-                                <td className="date">{item.date}</td>
-                                <td>{cashFormt(item.value)}</td>
+                            <tr key={item.descricao_taxa}>
+                                <td>{item.descricao_taxa}</td>
+                                <td className="date">{item.ref_pagamento}</td>
+                                <td>{formatCurrency(item.valor_taxa)}</td>
                             </tr>
                         )
                     })

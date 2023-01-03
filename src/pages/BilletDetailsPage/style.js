@@ -3,19 +3,19 @@ import Styled from "styled-components";
 export const StyledBilletDetailsPage = Styled.div`
     width: 800px;
 
-    .value {
-        font-size: 21px;
-        font-weight: bold;
-    }
-
     .status {
         color: #6a6a6a;
         font-weight: bold;
-        margin: 8px 0;
+        margin-top: 32px;
+    }
+
+    .paid {
+        color: green;
     }
 
     .dueDate {
-        margin: 36px 0;
+        margin-top: 16px;
+        margin-bottom: 32px;
     }
     
     .textBarcode {

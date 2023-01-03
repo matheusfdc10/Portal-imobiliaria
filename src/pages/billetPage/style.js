@@ -14,6 +14,10 @@ export const StyledBilletPage = Styled.div`
         margin: 8px 0;
     }
 
+    .paid {
+       color: green;
+    }
+
     .dueDate {
         margin-bottom: 36px;
     }
