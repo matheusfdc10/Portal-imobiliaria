@@ -2,12 +2,16 @@ import { StyledTable } from "./style";
 
 const Table = ({ data }) => {
 
+    const cashFormt = (number) => {
+        return Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(number)
+    }
+
     const soma = () => {
         var total = null
         data.map((item => {
             total += item.value
         }))
-        return total
+        return cashFormt(total)
     }
 
     return(
@@ -26,7 +30,7 @@ const Table = ({ data }) => {
                             <tr key={item.name}>
                                 <td>{item.name}</td>
                                 <td className="date">{item.date}</td>
-                                <td>R$ {item.value}</td>
+                                <td>{cashFormt(item.value)}</td>
                             </tr>
                         )
                     })
@@ -37,7 +41,7 @@ const Table = ({ data }) => {
                 <tr className="total">
                     <td>Total</td>
                     <td className="date"></td>
-                    <td>R$ {soma()}</td>
+                    <td>{soma()}</td>
                 </tr>
             </tfoot>
         </StyledTable>
