@@ -10,6 +10,7 @@ import { AuthContext, AuthProvider } from "../contexts/auth";
 import HomePage from "../pages/HomePage";
 import BilletPage from "../pages/billetPage";
 import BilletDetailsPage from "../pages/BilletDetailsPage";
+import LoginPage from "../pages/LoginPage";
 
 export default function AppRoutes() {
 
@@ -27,6 +28,7 @@ export default function AppRoutes() {
     <Router>
         <AuthProvider>
             <Routes>
+            <Route path="/login" element={<LoginPage />}/>
             <Route
                 path="/"
                 element={

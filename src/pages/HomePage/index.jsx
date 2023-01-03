@@ -1,13 +1,17 @@
+import { useContext } from "react";
 import { BiPhone } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Container from "../../components/Container";
+import { AuthContext } from "../../contexts/auth";
 import { StyledHomePage } from "./style"
 
 const HomePage = () => {
+    const { user } = useContext(AuthContext);
+
     return(
         <StyledHomePage>
-            <h1 className="name">Olá, Matheus</h1>
+            <h1 className="name">Olá, {user.nome.split(' ')[0]}</h1>
             <span>Bem vindo ao portal do locatário</span>
 
             <Container title={'Imobiliária Matheus'}>
