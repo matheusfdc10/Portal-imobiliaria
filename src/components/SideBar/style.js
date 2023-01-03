@@ -15,6 +15,7 @@ export const StyledSideBar = Styled.div`
 
     > a {
         display: flex;
+        flex-direction: row;
         align-items: center;
         border-radius: 28px;
         padding: 8px;
