@@ -12,11 +12,11 @@ const HomePage = () => {
 
             <Container title={'Imobiliária Matheus'}>
                 <div className="contacCompany">
-                    <a href="tel:9999999999">
+                    <a href="https://api.whatsapp.com/send/?phone=5521999999999">
                         <FaWhatsapp />
                         <span>21 99999-9999</span>
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone=5521999999999">
+                    <a href="tel:9999999999">
                         <BiPhone />
                         <span>21 99999-9999</span>
                     </a>
