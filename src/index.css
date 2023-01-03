@@ -26,13 +26,7 @@ code {
     monospace;
 }
 
-/* #root, body, html {
-  height: 100%;
-  margin: 0;
-} */
-
-/* #root {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10px;
-} */
+a {
+  text-decoration: none;
+  color: black;
+}

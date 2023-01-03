@@ -19,11 +19,11 @@ const NavBar = () => {
                     <MdAttachMoney />
                     <span>Fatura</span>
                 </NavLink>
-                <NavLink to='/home' className={({ isActive }) => isActive ? activeLink : null}>
+                <NavLink>
                     <BiHome />
                     <span>Início</span>
                 </NavLink>
-                <NavLink to='/tela2' className={({ isActive }) => isActive ? activeLink : null}>
+                <NavLink>
                     <MdAttachMoney />
                     <span>Fatura</span>
                 </NavLink>
