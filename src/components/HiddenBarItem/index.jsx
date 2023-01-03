@@ -1,12 +1,14 @@
+import { NavLink } from "react-router-dom";
 import { StyledHiddenBarItem } from "./style";
 
-export default function SidebarItem({ Icon, text, action, path, setHiddenBar }) {
+export default function SidebarItem({ Icon, text, path, setHiddenBar }) {
 
   return (
-    // eslint-disable-next-line
-    <StyledHiddenBarItem onClick={() => (setHiddenBar(false), action(path))}>
-      <Icon />
-      {text}
-    </StyledHiddenBarItem>
+    <NavLink to={path} >
+        <StyledHiddenBarItem onClick={() => setHiddenBar(false)}>
+        <Icon />
+        {text}
+        </StyledHiddenBarItem>
+    </NavLink>
   );
 }

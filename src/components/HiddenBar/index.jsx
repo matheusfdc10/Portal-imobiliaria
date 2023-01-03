@@ -10,7 +10,7 @@ export default function HiddenBar({ setHiddenBar }) {
       <FaTimes onClick={() => setHiddenBar(false)} />
       <StyledContent>
         {/* <SidebarItem Icon={FaRegSun} text="Alterar senha"/> */}
-        <SidebarItem setHiddenBar={setHiddenBar} Icon={BiLogOut} text="Sair" action={() => {}}/>
+        <SidebarItem setHiddenBar={setHiddenBar} Icon={BiLogOut} text="Sair" path='/home'/>
       </StyledContent>
     </StyledHiddenBar>
   );

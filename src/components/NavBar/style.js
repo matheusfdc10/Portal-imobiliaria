@@ -21,7 +21,7 @@ export const StyledNavBar = styled.div`
 
     > .container {
         display: flex;
-        gap: 32px;
+        gap: 40px;
 
         @media (max-width: 450px){
             flex: 1;
@@ -29,7 +29,7 @@ export const StyledNavBar = styled.div`
             gap: 0;
         }
 
-        > a {
+        > a, .hiddenBar {
             display: flex;
             flex-direction: column;
             align-items: center;

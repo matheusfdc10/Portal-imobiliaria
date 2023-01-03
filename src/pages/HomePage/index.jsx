@@ -8,7 +8,7 @@ const HomePage = () => {
     return(
         <StyledHomePage>
             <h1 className="name">Olá, Matheus</h1>
-            <span>Bem vindo ao poral do locatário</span>
+            <span>Bem vindo ao portal do locatário</span>
 
             <Container title={'Imobiliária Matheus'}>
                 <div className="contacCompany">
@@ -23,17 +23,17 @@ const HomePage = () => {
                 </div>
             </Container>
 
-            <Container title={'Última fatura'}>
+            <Container title={'Último boleto'}>
                 <div className="lastTicket">
                     <div className="value">
-                        <h3>R$ 99,99</h3>
+                        <h3>R$ 1298,75</h3>
                         <span>Aguardando pagamento</span>
                     </div>
                     <div className="dueDate">
                         <span>vencimento:</span>
                         <span>10/01/2023</span>
                     </div>
-                    <Link to='/ticket'>{'Visualizar Fatura >'}</Link>
+                    <Link to='/billet'>{'Visualizar Boleto >'}</Link>
                 </div>
             </Container>
 

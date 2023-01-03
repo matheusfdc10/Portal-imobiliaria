@@ -1,6 +1,6 @@
 import Styled from "styled-components";
 
-export const StyledTicketPage = Styled.div`
+export const StyledBilletDetailsPage = Styled.div`
     width: 800px;
 
     .value {
@@ -15,7 +15,7 @@ export const StyledTicketPage = Styled.div`
     }
 
     .dueDate {
-        margin-bottom: 36px;
+        margin: 36px 0;
     }
     
     .textBarcode {

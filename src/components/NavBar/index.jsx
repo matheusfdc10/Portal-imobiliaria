@@ -18,9 +18,9 @@ const NavBar = () => {
                     <BiHome />
                     <span>Início</span>
                 </NavLink>
-                <NavLink to='/ticket' className={({ isActive }) => isActive ? activeLink : null}>
+                <NavLink to='/billet' className={({ isActive }) => isActive ? activeLink : null}>
                     <MdAttachMoney />
-                    <span>Fatura</span>
+                    <span>Boleto</span>
                 </NavLink>
                 <NavLink>
                     <BiHome />
@@ -28,15 +28,15 @@ const NavBar = () => {
                 </NavLink>
                 <NavLink>
                     <MdAttachMoney />
-                    <span>Fatura</span>
+                    <span>Boleto</span>
                 </NavLink>
-                <NavLink>
-                    <FaBars onClick={() => setHiddenBar(!hiddenBar)} />
+                <div className='hiddenBar' onClick={() => setHiddenBar(!hiddenBar)}>
+                    <FaBars />
                         {hiddenBar &&
                             <HiddenBar setHiddenBar={setHiddenBar}/>
                         }
                     <span>Mais</span>
-                </NavLink>
+                </div >
             </div>
             
         </StyledNavBar>

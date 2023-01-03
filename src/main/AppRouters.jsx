@@ -8,7 +8,8 @@ import {
 import MainPage from ".";
 import { AuthContext, AuthProvider } from "../contexts/auth";
 import HomePage from "../pages/HomePage";
-import TicketPage from "../pages/TicketPage";
+import BilletPage from "../pages/billetPage";
+import BilletDetailsPage from "../pages/BilletDetailsPage";
 
 export default function AppRoutes() {
 
@@ -34,7 +35,8 @@ export default function AppRoutes() {
                     </Private>}
                 >
                 <Route path="/home" element={<HomePage />} />
-                <Route path="/ticket" element={<TicketPage />} />
+                <Route path="/billet" element={<BilletPage />} />
+                <Route path="/billet/details" element={<BilletDetailsPage />}/>
             </Route>
             </Routes>
         </AuthProvider>
