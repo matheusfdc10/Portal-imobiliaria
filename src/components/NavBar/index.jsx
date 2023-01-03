@@ -3,8 +3,11 @@ import { FaBars } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import { BiHome } from 'react-icons/bi';
 import { MdAttachMoney } from 'react-icons/md';
+import HiddenBar from '../HiddenBar/index.jsx';
+import { useState } from 'react';
 
 const NavBar = () => {
+    const [hiddenBar, setHiddenBar] = useState(false);
     const activeLink = 'isActive'
 
     return (
@@ -15,7 +18,7 @@ const NavBar = () => {
                     <BiHome />
                     <span>Início</span>
                 </NavLink>
-                <NavLink to='/tela2' className={({ isActive }) => isActive ? activeLink : null}>
+                <NavLink to='/fatura' className={({ isActive }) => isActive ? activeLink : null}>
                     <MdAttachMoney />
                     <span>Fatura</span>
                 </NavLink>
@@ -28,7 +31,10 @@ const NavBar = () => {
                     <span>Fatura</span>
                 </NavLink>
                 <NavLink>
-                    <FaBars />
+                    <FaBars onClick={() => setHiddenBar(!hiddenBar)} />
+                        {hiddenBar &&
+                            <HiddenBar setHiddenBar={setHiddenBar}/>
+                        }
                     <span>Mais</span>
                 </NavLink>
             </div>

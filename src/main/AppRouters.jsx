@@ -34,7 +34,7 @@ export default function AppRoutes() {
                     </Private>}
                 >
                 <Route path="/home" element={<HomePage />} />
-                <Route path="/tela2" element={<Tela2Page />} />
+                <Route path="/fatura" element={<Tela2Page />} />
             </Route>
             </Routes>
         </AuthProvider>

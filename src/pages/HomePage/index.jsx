@@ -1,7 +1,7 @@
 import { BiPhone } from "react-icons/bi";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Container from "../../components/Container";
-import Line from "../../components/Line";
 import { StyledHomePage } from "./style"
 
 const HomePage = () => {
@@ -33,7 +33,7 @@ const HomePage = () => {
                         <span>vencimento</span>
                         <span>01/02/2023</span>
                     </div>
-                    <a href="/">{'Visualizar Fatura >'}</a>
+                    <Link to='/fatura'>{'Visualizar Fatura >'}</Link>
                 </div>
             </Container>
 

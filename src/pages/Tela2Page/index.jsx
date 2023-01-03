@@ -1,5 +1,4 @@
 import Container from "../../components/Container";
-import Line from "../../components/Line";
 import { StyledPage } from "./style"
  
 const Tela2Page = () => {
