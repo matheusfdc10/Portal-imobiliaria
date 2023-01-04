@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getUser } from "../server/api";
 
 const usuario = {
   id: 1,
@@ -208,20 +209,18 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     try {
-      if (email === usuario.login && password === usuario.senha) {
-        loadUser();
-      } else {
-        alert("email ou senha invalido!");
-      }
+      const response = await getUser(email, password)
+      loadUser(response.data);
     } catch (err) {
       logout();
+      alert("email ou senha invalido!");
       console.log(err);
     }
   };
 
-  const loadUser = async () => {
+  const loadUser = async (user) => {
     try {
-      setUser(usuario);
+      setUser(user);
       setLastTicket(ultimo_boleto);
       navigate("/home");
     } catch (err) {
