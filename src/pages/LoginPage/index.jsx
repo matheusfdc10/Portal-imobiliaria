@@ -4,8 +4,8 @@ import { StyledLoginPage } from "./style";
 
 const LoginPage = () => {
     const { login } = useContext(AuthContext)
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('joao123')
+    const [password, setPassword] = useState('123')
 
     const handleLogin = async (email, password) => {
         setPassword('')

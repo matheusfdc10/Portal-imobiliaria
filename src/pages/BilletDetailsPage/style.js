@@ -13,6 +13,10 @@ export const StyledBilletDetailsPage = Styled.div`
         color: green;
     }
 
+    .delay {
+        color: red;
+    }
+
     .dueDate {
         margin-top: 16px;
         margin-bottom: 32px;

@@ -31,6 +31,10 @@ export const StyledHomePage = Styled.div`
             > .paid {
                 color: green;
             }
+
+            > .delay {
+                color: red;
+            }
         }
 
         > .dueDate {

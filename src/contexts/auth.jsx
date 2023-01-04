@@ -17,15 +17,21 @@ const usuario = {
   tipo_acesso: "LOC",
 };
 
+function addDays(date, days) {
+  if(!date) return date
+  date.setDate(date.getDate() + days);
+  return date;
+}
+
 const ultimo_boleto = {
   id: 5,
   banco_nosso_numero: 12324,
   cod_remessa: 423532,
   cod_taxa: 10,
-  data_emissao: new Date(),
-  data_remessa: new Date(),
-  data_pagamento: new Date(),
-  data_vencimento: new Date(),
+  data_emissao: addDays(new Date(), 1),
+  data_remessa: addDays(new Date(), 2),
+  data_pagamento: null,
+  data_vencimento: addDays(new Date(), 0),
   desc_aaxa: "10",
   Juros: 10.5,
   mes_ref: "Janeiro",
@@ -197,7 +203,6 @@ export function AuthProvider({ children }) {
   const [lastTicket, setLastTicket] = useState(null);
 
   useEffect(() => {
-    loadUser();
     // eslint-disable-next-line
   }, []);
 
