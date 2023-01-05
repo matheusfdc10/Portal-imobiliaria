@@ -1,9 +1,9 @@
 import Line from "../Line";
 import { StyledContainer } from "./style";
 
-const Container = ({ children, title }) => {
+const Container = ({ children, title, className }) => {
     return(
-        <StyledContainer>
+        <StyledContainer className={className}>
             <h2>{title}</h2>
             <Line />
             {children }

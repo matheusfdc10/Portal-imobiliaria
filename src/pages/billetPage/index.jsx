@@ -6,6 +6,136 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/auth";
 import { formatDate, formatDateNumber } from "../../utils/formatDate";
 import { formatCurrency } from "../../utils/formatCurrency";
+import { GoCheck, GoX } from "react-icons/go";
+
+const todos_boletos = [
+    {
+      id: 3,
+      banco_nosso_numero: 12324,
+      cod_remessa: 423532,
+      cod_taxa: 10,
+      data_emissao: new Date(),
+      data_remessa: new Date(),
+      data_pagamento: null,
+      data_vencimento: new Date(),
+      desc_aaxa: "10",
+      Juros: 10.5,
+      mes_ref: "Dezembro",
+      multa: 120.5,
+      observacao_pagamento: "Não aceitar boleto após 30 dias",
+      tipo: " ",
+      valor_boleto: 1200.0,
+      valor_pago: 1450.0,
+      valor_taxa: null,
+      linha_digitável: "656759876785 567548975687 764764 67567476764",
+      descricao_boleto: [
+        {
+          descricao_taxa: "Aluguel",
+          ref_pagamento: "01/2023",
+          valor_taxa: 1200,
+        },
+        {
+          descricao_taxa: "Condomínio",
+          ref_pagamento: "01/2023",
+          valor_taxa: 230.5,
+        },
+        {
+          descricao_taxa: "IPTU",
+          ref_pagamento: "01/10",
+          valor_taxa: 120.5,
+        },
+        {
+          descricao_taxa: "Reembolso",
+          ref_pagamento: "conserto da pia",
+          valor_taxa: -60,
+        },
+      ],
+    },
+    {
+      id: 2,
+      banco_nosso_numero: 12324,
+      cod_remessa: 423532,
+      cod_taxa: 10,
+      data_emissao: new Date(),
+      data_remessa: new Date(),
+      data_pagamento: new Date(),
+      data_vencimento: new Date(),
+      desc_aaxa: "10",
+      Juros: 10.5,
+      mes_ref: "Novembro",
+      multa: 120.5,
+      observacao_pagamento: "Não aceitar boleto após 30 dias",
+      tipo: " ",
+      valor_boleto: 1200.0,
+      valor_pago: 1200.0,
+      valor_taxa: null,
+      linha_digitável: "656759876785 567548975687 764764 67567476764",
+      descricao_boleto: [
+        {
+          descricao_taxa: "Aluguel",
+          ref_pagamento: "01/2023",
+          valor_taxa: 1200,
+        },
+        {
+          descricao_taxa: "Condomínio",
+          ref_pagamento: "01/2023",
+          valor_taxa: 230.5,
+        },
+        {
+          descricao_taxa: "IPTU",
+          ref_pagamento: "01/10",
+          valor_taxa: 120.5,
+        },
+        {
+          descricao_taxa: "Reembolso",
+          ref_pagamento: "conserto da pia",
+          valor_taxa: -60,
+        },
+      ],
+    },
+    {
+      id: 1,
+      banco_nosso_numero: 12324,
+      cod_remessa: 423532,
+      cod_taxa: 10,
+      data_emissao: new Date(),
+      data_remessa: new Date(),
+      data_pagamento: new Date(),
+      data_vencimento: new Date(),
+      desc_aaxa: "10",
+      Juros: 10.5,
+      mes_ref: "Outubro",
+      multa: 120.5,
+      observacao_pagamento: "Não aceitar boleto após 30 dias",
+      tipo: " ",
+      valor_boleto: 1200.0,
+      valor_pago: 1300.0,
+      valor_taxa: null,
+      linha_digitável: "656759876785 567548975687 764764 67567476764",
+      descricao_boleto: [
+        {
+          descricao_taxa: "Aluguel",
+          ref_pagamento: "01/2023",
+          valor_taxa: 1200,
+        },
+        {
+          descricao_taxa: "Condomínio",
+          ref_pagamento: "01/2023",
+          valor_taxa: 230.5,
+        },
+        {
+          descricao_taxa: "IPTU",
+          ref_pagamento: "01/10",
+          valor_taxa: 120.5,
+        },
+        {
+          descricao_taxa: "Reembolso",
+          ref_pagamento: "conserto da pia",
+          valor_taxa: -60,
+        },
+      ],
+    },
+  ]
 
 const BilletPage = () => {
   const date = new Date();
@@ -25,7 +155,7 @@ const BilletPage = () => {
 
   return (
     <StyledBilletPage>
-      <Container
+      <Container className='ultimoBoleto'
         title={`Último boleto - ${
           formatDateNumber(lastTicket.data_vencimento).split("/")[1]
         }/${formatDateNumber(lastTicket.data_vencimento).split("/")[2]}`}
@@ -62,7 +192,21 @@ const BilletPage = () => {
             </CopyToClipboard>
           </>
         )}
-        <Link to="details">{"Detalhes do boleto >"}</Link>
+        <Link className="details" to="details">{"Detalhes do boleto >"}</Link>
+      </Container>
+
+      <Container className='historic' title='Histórico de boletos'>
+        {todos_boletos.map(boleto => {
+            return (
+                <Link key={boleto.id}>
+                    <div>
+                        {boleto.data_pagamento? <GoCheck /> : <GoX />}
+                        <span>{boleto.mes_ref}</span>
+                    </div>
+                    <span>{`${formatCurrency(boleto.valor_pago)} >`}</span>
+                </Link>
+            )
+        })}
       </Container>
     </StyledBilletPage>
   );

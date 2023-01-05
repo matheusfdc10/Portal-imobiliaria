@@ -50,8 +50,30 @@ export const StyledBilletPage = Styled.div`
         }
     }
 
-    > div > a {
+    > .ultimoBoleto > a {
         margin-top: 32px;
         font-weight: bold;
+    }
+
+    > .historic > a {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f1f1f1;
+        align-items: center;
+        padding: 8px 4px;
+        :last-child{
+            border-bottom: none;
+        }
+
+        > div {
+            display: flex;
+            align-items: center;
+
+            > svg {
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
     }
 `
