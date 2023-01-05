@@ -165,7 +165,7 @@ const BilletDetailsPage = () => {
         ...boleto.descricao_boleto,
         {
           descricao_taxa: "Multa",
-          ref_pagamento: `Atraso PG`,
+          ref_pagamento: `Venceu em ${formatDateNumber(boleto.data_vencimento)}`,
           valor_taxa: boleto.multa,
         },
       ]);
