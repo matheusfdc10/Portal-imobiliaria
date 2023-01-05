@@ -55,7 +55,7 @@ export const StyledBilletPage = Styled.div`
         font-weight: bold;
     }
 
-    > .historic > a {
+    > .historic > div {
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #f1f1f1;

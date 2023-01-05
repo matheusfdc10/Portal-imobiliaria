@@ -38,7 +38,7 @@ export default function AppRoutes() {
                 >
                 <Route path="/home" element={<HomePage />} />
                 <Route path="/billet" element={<BilletPage />} />
-                <Route path="/billet/details" element={<BilletDetailsPage />}/>
+                <Route path="/billet/details/:id" element={<BilletDetailsPage />}/>
             </Route>
             </Routes>
         </AuthProvider>
