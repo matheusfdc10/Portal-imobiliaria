@@ -7,7 +7,7 @@ export const StyledContainer = Styled.div`
     margin-top: 32px;
     display: flex;
     flex-direction: column;
-
+    
     > h2 {
         font-size: 22px;
     }

@@ -11,6 +11,7 @@ import HomePage from "../pages/HomePage";
 import BilletPage from "../pages/billetPage";
 import BilletDetailsPage from "../pages/BilletDetailsPage";
 import LoginPage from "../pages/LoginPage";
+import ContractPage from "../pages/ContractPage";
 
 export default function AppRoutes() {
 
@@ -39,6 +40,7 @@ export default function AppRoutes() {
                 <Route path="/home" element={<HomePage />} />
                 <Route path="/billet" element={<BilletPage />} />
                 <Route path="/billet/details/:id" element={<BilletDetailsPage />}/>
+                <Route path="/contract" element={<ContractPage />}/>
             </Route>
             </Routes>
         </AuthProvider>

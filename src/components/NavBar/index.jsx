@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import { BiHome } from 'react-icons/bi';
 import { MdAttachMoney } from 'react-icons/md';
+import { HiOutlineDocumentText } from 'react-icons/hi';
 import HiddenBar from '../HiddenBar/index.jsx';
 import { useState } from 'react';
 
@@ -22,14 +23,14 @@ const NavBar = () => {
                     <MdAttachMoney />
                     <span>Boleto</span>
                 </NavLink>
-                <NavLink>
-                    <BiHome />
-                    <span>Início</span>
+                <NavLink to='/contract' className={({ isActive }) => isActive ? activeLink : null}>
+                    <HiOutlineDocumentText />
+                    <span>Contrato</span>
                 </NavLink>
-                <NavLink>
-                    <MdAttachMoney />
+                {/* <NavLink>
+                    <HiOutlineDocumentText />
                     <span>Boleto</span>
-                </NavLink>
+                </NavLink> */}
                 <div className='hiddenBar' onClick={() => setHiddenBar(!hiddenBar)}>
                     <FaBars />
                         {hiddenBar &&
