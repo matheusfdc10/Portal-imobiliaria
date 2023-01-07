@@ -6,6 +6,8 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/auth";
 import { formatDate, formatDateNumber } from "../../utils/formatDate";
 import { useParams } from "react-router-dom";
+import { bankSlipPdf } from "../../utils/bankSlipPdf.js";
+import { FaRegFilePdf } from "react-icons/fa";
 
 const todos_boletos = [
   {
@@ -201,6 +203,8 @@ const BilletDetailsPage = () => {
             <CopyToClipboard text={boleto.linha_digitavel}>
               <button className="copy">Copiar</button>
             </CopyToClipboard>
+            <span className="textBarcode">Pague com boleto:</span>
+            <button className="btn-pdf" onClick={() => bankSlipPdf(boleto)}><FaRegFilePdf /><span>Gerar Boleto</span></button>
           </>
         )}
       </Container>

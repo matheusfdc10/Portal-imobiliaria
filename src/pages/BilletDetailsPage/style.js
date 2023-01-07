@@ -40,6 +40,8 @@ export const StyledBilletDetailsPage = Styled.div`
         background-color: #f1f1f1;
         border-radius: 30px;
         padding: 4px;
+        margin-bottom: 40px;
+
         :active {
             background-color: #e1e1e1;
             color: red;
@@ -49,5 +51,29 @@ export const StyledBilletDetailsPage = Styled.div`
     > div > a {
         margin-top: 32px;
         font-weight: bold;
+    }
+
+    .btn-pdf {
+        align-items: center;
+        max-width: 50px;
+        margin: 8px;
+        padding: 6px;
+        /* align-self: center; */
+        border: none;
+        border-radius: 8px;
+
+        :hover {
+            background-color: #e1e1e1;
+            color: red;
+        }
+
+        > svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        > span {
+            font-size: 12px;
+        }
     }
 `
