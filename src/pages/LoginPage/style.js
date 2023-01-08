@@ -41,6 +41,10 @@ export const StyledLoginPage = Styled.div`
                 padding-left: 8px;
                 border: none;
                 box-shadow: 0 0 5px #0004;
+                :focus {
+                    outline: 0;
+                    box-shadow: 0 0 5px #0008;
+                }
             }
         }
         .action {
