@@ -8,7 +8,7 @@ import {
 import MainPage from ".";
 import { AuthContext, AuthProvider } from "../contexts/auth";
 import HomePage from "../pages/HomePage";
-import BilletPage from "../pages/BilletPage";
+import BilletPage from "../pages/billetPage";
 import BilletDetailsPage from "../pages/BilletDetailsPage";
 import LoginPage from "../pages/LoginPage";
 import ContractPage from "../pages/ContractPage";
