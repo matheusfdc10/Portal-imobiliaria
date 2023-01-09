@@ -44,9 +44,12 @@ export const StyledBilletPage = Styled.div`
         background-color: #f1f1f1;
         border-radius: 30px;
         padding: 4px;
-        :active {
+        cursor: pointer;
+
+        :active, :hover {
+            box-shadow: 0 0 12px #0002;
             background-color: #e1e1e1;
-            color: red;
+            font-weight: bold;
         }
     }
 
@@ -60,9 +63,20 @@ export const StyledBilletPage = Styled.div`
         justify-content: space-between;
         border-bottom: 1px solid #f1f1f1;
         align-items: center;
-        padding: 8px 4px;
-        :last-child{
+        padding: 12px 4px ;
+        cursor: pointer;
+
+        :first-of-type {
+        }
+
+        :last-of-type {
             border-bottom: none;
+        }
+
+        :hover, :active {
+            /* background: #0001; */
+            border-radius: 25px;
+            box-shadow: 0 0 12px #0002;
         }
 
         > div {

@@ -207,7 +207,7 @@ const BilletPage = () => {
                 {boleto.data_pagamento ? <GoCheck color="green"/> : <GoX color="red" />}
                 <span>{boleto.mes_ref}</span>
               </div>
-              <span>{boleto.data_pagamento ? `${formatCurrency(boleto.valor_pago)} >` : `${formatCurrency(boleto.valor_boleto + boleto.multa)} >`}</span>
+              <span>{boleto.data_pagamento ? `${formatCurrency(boleto.valor_pago)} >` : `${formatCurrency(boleto.valor_boleto + boleto.multa)} >`} </span>
             </div>
           );
         })}

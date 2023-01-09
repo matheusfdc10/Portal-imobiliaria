@@ -41,10 +41,12 @@ export const StyledBilletDetailsPage = Styled.div`
         border-radius: 30px;
         padding: 4px;
         margin-bottom: 40px;
+        cursor: pointer;
 
-        :active {
+        :active, :hover {
+            box-shadow: 0 0 12px #0002;
             background-color: #e1e1e1;
-            color: red;
+            font-weight: bold;
         }
     }
 
@@ -62,9 +64,11 @@ export const StyledBilletDetailsPage = Styled.div`
         border: none;
         border-radius: 8px;
 
-        :hover {
+        :active, :hover {
+            box-shadow: 0 0 12px #0002;
             background-color: #e1e1e1;
-            color: red;
+            font-weight: bold;
+            /* color: red; */
         }
 
         > svg {

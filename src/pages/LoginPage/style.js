@@ -63,7 +63,9 @@ export const StyledLoginPage = Styled.div`
                 box-shadow: 0 0 5px #0004;
 
                 :active {
-                    background-color: #d1d1d1;
+                    /* background-color: #d1d1d1; */
+                    background-color: white;
+                    font-weight: bold;
                 }
             }
         }
